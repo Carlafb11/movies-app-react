@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import Navbar from '../components/NavBar';
 import Context from '../context/Context'
 import MovieDisplay from '../components/MovieDisplay';
+import Footer from '../components/Footer'
 
 import useNowPlaying from '../hooks/useNowPlaying'
 
@@ -25,7 +26,7 @@ const Release = () => {
           </Grid>
         ))}
       </Grid>
-      {/* <MovieDisplay id={firstMovie.id} image={firstMovie.poster_path} title={firstMovie.title} /> */}
+      <Footer />
     </div>
   )
 }

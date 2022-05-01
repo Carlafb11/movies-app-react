@@ -5,6 +5,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search'
 import Navbar from '../components/NavBar'
 import MovieDisplay from '../components/MovieDisplay';
+import Footer from '../components/Footer'
 import '../styles/search.scss';
 
 const Search = () => {
@@ -49,6 +50,7 @@ const Search = () => {
           </Grid>
         ))}
       </Grid>
+      <Footer />
     </div>
   )
 }
