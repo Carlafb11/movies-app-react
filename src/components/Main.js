@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from './NavBar'
+import SliderHomePage from './SliderHomePage'
 
 const Main = () => {
   return (
     <div>
       <Navbar/>
-      <h1>Main</h1>
+      <SliderHomePage />
     </div>
   )
 }
