@@ -11,7 +11,9 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom'
 
-const pages = ['/', '/release', '/popular', '/search'];
+import '../styles/navbar.scss';
+
+const pages = ['/release', '/popular', '/search'];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -32,18 +34,25 @@ const NavBar = () => {
     setAnchorElUser(null);
   };
 
+  const buildPageName = (pageName) => {
+    const newString = pageName.substring(1);
+    return newString;
+  }
+
   return (
-    <AppBar position="static">
+    <AppBar className="navbar-container" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            LOGO
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            >
+              Movies App
+            </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -77,21 +86,23 @@ const NavBar = () => {
               {pages.map((page, index) => (
                 <Link key={index} to={page}>
                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
+                      <Typography textAlign="center">{buildPageName(page)}</Typography>
                     </MenuItem>
                   </Link>
                
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            LOGO
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            >
+              Movies App
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link key={page} to={page}>
@@ -99,7 +110,7 @@ const NavBar = () => {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
-                  {page}
+                  {buildPageName(page)}
                 </Button>
               </Link>
             ))}
