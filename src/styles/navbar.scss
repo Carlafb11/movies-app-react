@@ -1,0 +1,17 @@
+.navbar-container {
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    
+
+    &:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    button {
+      text-transform: capitalize;
+    }
+  }
+}
