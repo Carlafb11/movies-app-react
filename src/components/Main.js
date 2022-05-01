@@ -6,6 +6,7 @@ import useTopRated from '../hooks/useTopRated'
 import useNowPlaying from '../hooks/useNowPlaying'
 import SliderHomePage from './SliderHomePage'
 import ListsHomePage from './ListsHomePage'
+import Footer from './Footer'
 
 const Main = () => {
   const context = useContext(Context);
@@ -17,6 +18,7 @@ const Main = () => {
       <Navbar/>
       <SliderHomePage />
       <ListsHomePage />
+      <Footer />
     </div>
   )
 }
