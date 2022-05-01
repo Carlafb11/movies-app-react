@@ -21,7 +21,7 @@ function App() {
     topRated,
     setTopRated
   }
-
+  
   return (
     <Context.Provider value={context}>
         <BrowserRouter>
