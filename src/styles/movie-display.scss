@@ -1,0 +1,26 @@
+.movie-display-container {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  border: .5px solid gainsboro;
+  color: black;
+
+  img {
+    height: 350px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .title {
+    border-bottom: .5px solid gainsboro;
+    text-align: center;
+  }
+
+  .title, .preview {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+}
