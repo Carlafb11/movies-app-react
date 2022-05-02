@@ -16,8 +16,8 @@ const Main = () => {
   return (
     <div>
       <Navbar/>
-      <SliderHomePage />
-      <ListsHomePage />
+      <SliderHomePage movies={context.nowPlaying} />
+      <ListsHomePage popular={context.popular} topRated={context.topRated} />
       <Footer />
     </div>
   )

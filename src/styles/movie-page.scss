@@ -1,12 +1,19 @@
 .movie-page-container {
-  height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
+  height: 100vh;
+
+  .details-info-container {
+    background-color: rgba(0, 0, 0, 0.445);
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    height: 100%;
+  }
 
   .movie-poster {
     width: 80%;
-
   }
 }
