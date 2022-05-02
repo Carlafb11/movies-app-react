@@ -31,10 +31,10 @@ const MoviePage = () => {
       <Navbar />
       <Box height='100%' sx={{ flexGrow: 1 }}>
         <Grid className="details-info-container" container spacing={0}>
-          <Grid item xs={3}>
+          <Grid item md={3} xs={12}>
             <img className="movie-poster" src={useImageUrl(movie.poster_path)} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={6} xs={12}>
             <Grid container>
               <Grid container justifyContent="space-between">
                 <h2>{movie.title}<span> {movie.release_date?.slice(0, 4)}</span></h2>
