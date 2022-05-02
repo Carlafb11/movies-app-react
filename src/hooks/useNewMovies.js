@@ -6,9 +6,9 @@ import useFetchPeliculas from './useFetchPeliculas'
 const useNewMovies = () => {
   const context = useContext(Context);
 
-  const results = useFetchPeliculas('latest');
+  const resultsObj = useFetchPeliculas('latest');
 
-  context.setNewMovies(results)
+  context.setNewMovies(resultsObj.peliculas)
 }
 
 export default useNewMovies

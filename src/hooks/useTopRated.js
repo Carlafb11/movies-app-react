@@ -6,9 +6,9 @@ import useFetchPeliculas from './useFetchPeliculas'
 const useTopRated = () => {
   const context = useContext(Context);
 
-  const results = useFetchPeliculas('top_rated');
+  const resultsObj = useFetchPeliculas('top_rated');
 
-  context.setTopRated(results)
+  context.setTopRated(resultsObj.peliculas)
 }
 
 export default useTopRated
