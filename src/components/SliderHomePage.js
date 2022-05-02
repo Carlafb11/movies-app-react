@@ -1,10 +1,11 @@
 import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/homepage-styles.scss'
 
 const SliderHomePage = () => {
   return (
     <div>
-      <Carousel>
+      <Carousel className="slider-style">
         <Carousel.Item>
           <img
             className="d-block w-100"
