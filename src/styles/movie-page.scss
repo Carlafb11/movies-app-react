@@ -17,3 +17,9 @@
     width: 80%;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .movie-page-container {
+    height: 100%;
+  }
+}
