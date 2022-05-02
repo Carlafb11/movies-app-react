@@ -29,7 +29,7 @@ const MoviePage = () => {
       style={{ backgroundImage: `url(${useImageUrl(movie.backdrop_path)})` }}
     >
       <Navbar />
-      <Box sx={{ flexGrow: 1 }}>
+      <Box height='100%' sx={{ flexGrow: 1 }}>
         <Grid className="details-info-container" container spacing={0}>
           <Grid item xs={3}>
             <img className="movie-poster" src={useImageUrl(movie.poster_path)} />
