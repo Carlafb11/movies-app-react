@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import Modal from '@mui/material/Modal';
 import useImageUrl from '../hooks/useImageUrl'
 import '../styles/movie-page.scss';
+import Footer from './Footer'
 
 const MoviePage = () => {
   const params = useParams();
@@ -28,12 +29,12 @@ const MoviePage = () => {
       style={{ backgroundImage: `url(${useImageUrl(movie.backdrop_path)})` }}
     >
       <Navbar />
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
+      <Box height='100%' sx={{ flexGrow: 1 }}>
+        <Grid className="details-info-container" container spacing={0}>
+          <Grid item xs={3}>
             <img className="movie-poster" src={useImageUrl(movie.poster_path)} />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={6}>
             <Grid container>
               <Grid container justifyContent="space-between">
                 <h2>{movie.title}<span> {movie.release_date?.slice(0, 4)}</span></h2> 
@@ -43,10 +44,10 @@ const MoviePage = () => {
               </Grid>
               <h4>General</h4>
               <p>{movie.overview}</p>
-              <h4>Generos</h4>
-              <ol>
+              <h4>Genres</h4>
+              <ul>
                 {movie.genres?.map((genre) => <li>{genre.name}</li>)}
-              </ol>
+              </ul>
             </Grid>
           </Grid>
         </Grid>
@@ -62,6 +63,7 @@ const MoviePage = () => {
           src="https://www.youtube.com/embed/tgbNymZ7vqY" />
         </Grid>
       </Modal>
+      <Footer />
     </div>
   )
 }
