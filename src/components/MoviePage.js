@@ -37,10 +37,7 @@ const MoviePage = () => {
           <Grid item xs={6}>
             <Grid container>
               <Grid container justifyContent="space-between">
-                <h2>{movie.title}<span> {movie.release_date?.slice(0, 4)}</span></h2> 
-                <Button onClick={handleOpen} variant="text" startIcon={<VideoIcon />}>
-                  Watch trailer
-                </Button>
+                <h2>{movie.title}<span> {movie.release_date?.slice(0, 4)}</span></h2>
               </Grid>
               <h4>General</h4>
               <p>{movie.overview}</p>
