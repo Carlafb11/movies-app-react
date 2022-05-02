@@ -3,12 +3,13 @@ import Context from '../context/Context'
 import useFetchPeliculas from './useFetchPeliculas'
 
 
-const useNowPlaying = () => {
+const useNowPlaying = (page) => {
   const context = useContext(Context);
 
-  const results = useFetchPeliculas('now_playing');
+  const resultsObj = useFetchPeliculas('now_playing', page);
 
-  context.setNowPlaying(results)
+  context.setNowPlaying(resultsObj.peliculas)
+  context.setNowPlayingTotalPages(resultsObj.totalPages)
 }
 
 export default useNowPlaying

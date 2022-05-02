@@ -10,14 +10,20 @@ import Context from "./context/Context"
 
 function App() {
   const [nowPlaying, setNowPlaying] = useState([]);
+  const [nowPlayingTotalPages, setNowPlayingTotalPages] = useState(0);
   const [popular, setPopular] = useState([]);
+  const [popularTotalPages, setPopularTotalPages] = useState(0);
   const [topRated, setTopRated] = useState([]);
 
   const context = {
     nowPlaying,
     setNowPlaying,
+    nowPlayingTotalPages,
+    setNowPlayingTotalPages,
     popular,
     setPopular,
+    popularTotalPages,
+    setPopularTotalPages,
     topRated,
     setTopRated
   }

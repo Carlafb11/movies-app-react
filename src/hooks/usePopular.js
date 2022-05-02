@@ -6,9 +6,9 @@ import useFetchPeliculas from './useFetchPeliculas'
 const usePopular = () => {
   const context = useContext(Context);
 
-  const results = useFetchPeliculas('popular');
+  const resultsObj = useFetchPeliculas('popular');
 
-  context.setPopular(results)
+  context.setPopular(resultsObj.peliculas)
 }
 
 export default usePopular
