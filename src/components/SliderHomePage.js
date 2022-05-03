@@ -7,9 +7,9 @@ import '../styles/homepage-styles.scss'
 const SliderHomePage = ({ movies }) => {
   return (
     <div>
-      <Carousel className="slider-style">
+      <Carousel>
         {movies.map((item, index) => (
-          <Carousel.Item key={index}>
+          <Carousel.Item className="slider-style" key={index}>
             <img
               className="d-block w-100"
               src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
